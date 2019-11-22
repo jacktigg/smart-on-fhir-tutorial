@@ -17367,12 +17367,6 @@ BBClient.authorize = function(params, errback){
   }
 
   var launch = urlParam("launch");
-  if (launch){
-    if (!params.client.scope.match(/launch/)){
-      //params.client.scope += " launch";
-    }
-    params.client.launch = launch;
-  }
 
   var server = urlParam("iss") || urlParam("fhirServiceUrl");
   if (server){
